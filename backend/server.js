@@ -8,6 +8,7 @@ const app = express()
 
 import productRouter from './routes/productRoutes.js'
 
+app.use(cors())
 app.use(express.json())
 app.use('/api/products' , productRouter)
 
