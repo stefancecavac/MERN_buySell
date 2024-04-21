@@ -26,7 +26,6 @@ const ProductDetailPage = () => {
             <p>loading ... </p> :
             <p>{singleProduct.product_name}</p>
             }
-          
         </div>
     )
 }

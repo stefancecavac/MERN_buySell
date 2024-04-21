@@ -27,10 +27,10 @@ const Home = () => {
             {loading ?
                 <p>loading ...</p> :
                 products && products.map((product) => (
-                    <Link to={`/${product._id}`} key={product._id}><ProductCard product={product}></ProductCard></Link>
+                    <Link className="rounded transition-all hover:translate-y-1 hover:scale-110" 
+                    to={`/${product._id}`} key={product._id}><ProductCard product={product}></ProductCard></Link>
                 ))
             }
-
         </div>
     )
 }
