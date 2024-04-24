@@ -17,7 +17,8 @@ const Login = () => {
             const response = await fetch(`http://localhost:4000/api/user/login`, {
                 method: 'POST',
                 body: JSON.stringify({ email, password }),
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
+                credentials:'include'
             })
 
             const json = await response.json()

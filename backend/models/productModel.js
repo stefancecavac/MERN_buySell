@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 const Schema = mongoose.Schema
 
 const productSchema = new Schema({
@@ -10,6 +10,10 @@ const productSchema = new Schema({
         type:Number,
         required:true
     },
+    user_id:{
+        type:mongoose.Types.ObjectId,
+        ref:'User'
+    }
 } , {timestamps:true})
 
 export default mongoose.model('Product' , productSchema)

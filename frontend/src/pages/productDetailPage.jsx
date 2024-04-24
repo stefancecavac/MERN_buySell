@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { UseProductContext } from "../hooks/useProductHook"
+import AddToCart from "../components/cart/addToCart"
 
 const ProductDetailPage = () => {
     const { singleProduct, dispatch } = UseProductContext()
-    const [loading , setLoading] = useState(true)
-    const {id} = useParams()
+    const [loading, setLoading] = useState(true)
+    const { id } = useParams()
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -18,13 +19,17 @@ const ProductDetailPage = () => {
             }
         }
         fetchProducts()
-    }, [dispatch,id])
+    }, [dispatch, id])
 
     return (
         <div>
-            {loading ? 
-            <p>loading ... </p> :
-            <p>{singleProduct.product_name}</p>
+            {loading ?
+                <p>loading ... </p> :
+                <>
+                    <p>{singleProduct.product_name}</p>
+                    <AddToCart id={id}></AddToCart>
+                </>
+
             }
         </div>
     )
