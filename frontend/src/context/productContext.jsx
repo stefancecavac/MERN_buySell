@@ -12,7 +12,7 @@ export const ProductReducer = (state, action) => {
             }
         case 'SET_PRODUCT':
             return {
-                ...state,
+
                 singleProduct: action.payload
             }
         case 'POST_PRODUCT':
@@ -36,6 +36,12 @@ export const ProductReducer = (state, action) => {
             return {
                 ...state,
                 cart: action.payload
+            }
+
+        case 'REMOVE_FROM_CART':
+            return {
+                ...state,
+                cart: state.cart.products.filter((item) => item._id !== action.payload._id)
             }
     }
 

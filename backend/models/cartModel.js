@@ -1,10 +1,15 @@
-import mongoose from 'mongoose'
+import mongoose, { mongo } from 'mongoose'
 const Schema = mongoose.Schema
 
 const cartSchema = new Schema({
     products:[{
-        type:mongoose.Types.ObjectId,
-        ref:'Product'
+        product_id:{
+            type:mongoose.Types.ObjectId,
+            ref:'Product'
+        },
+        quantity:{
+            type:Number
+        }
     }],
     user_id:{
         type:mongoose.Types.ObjectId,

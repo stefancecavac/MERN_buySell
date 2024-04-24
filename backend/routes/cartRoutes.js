@@ -8,7 +8,7 @@ router.use(authenticate)
 
 router.get('/', getCart)
 router.post('/',addToCart)
-router.delete('/:id',removeFromCart)
+router.delete('/',removeFromCart)
 
 
 export default router

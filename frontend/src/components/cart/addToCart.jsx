@@ -1,13 +1,16 @@
+import { useState } from 'react'
 import {UseProductContext} from '../../hooks/useProductHook'
 
 const AddToCart = ({id}) => {
 
     const{dispatch} = UseProductContext()
+
+    const [quantity , setQuantity] = useState('')
  
     const handleAddToCart = async() => {
         const response = await fetch(`http://localhost:4000/api/cart`,{
             method:'POST',
-            body: JSON.stringify({product:id}),
+            body: JSON.stringify({product:id , quantity}),
             headers: { 'Content-Type': 'application/json' },
             credentials:"include"
         })
@@ -19,7 +22,11 @@ const AddToCart = ({id}) => {
     }
 
     return(
+        <div>
         <button onClick={handleAddToCart}>Add to Cart</button>
+            <input type='number' onChange={(e) => setQuantity(e.target.value)}
+                value={quantity}></input>
+        </div>
     )
 }
 
