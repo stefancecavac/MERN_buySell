@@ -3,15 +3,13 @@
 const ProductCard = ({ product }) => {
 
     return (
-        <div className="rounded shadow   flex flex-col overflow-hidden">
-            <img className="bg-red-500 w-full h-36 " alt="image"></img>
+        <div className="rounded shadow bg-white  flex flex-col overflow-hidden">
+            <img className="bg-gray-300 w-full h-52 " alt="image"></img>
 
-            <p className="p-3">{product.product_name}</p>
-
-            <div className="p-3">
-                <p className="text-green-500 text-2xl">{product.price}€</p>
-            </div>
-
+            <p className="ml-3 mt-3 text-xl text-gray-600">{product.product_name}</p>
+            <p className="ml-3 text-blue-500  text-3xl flex items-center gap-2">{product.price}€ <span className="text-gray-600 text-base">  / price</span></p>
+          
+            <p className="ml-3 mt-5">user reviews:</p>
         </div>
     )
 }

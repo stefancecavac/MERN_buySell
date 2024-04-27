@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 const getProducts = async (req, res) => {
     try {
-        const product = await Product.find().populate('user_id')
+        const product = await Product.find()
         res.status(200).json(product)
     }
     catch (error) {
@@ -33,14 +33,14 @@ const getSingleProduct = async (req, res) => {
 }
 
 const postProduct = async (req, res) => {
-    const { product_name, price } = req.body
+    const { product_name, price, description , tags, images , stock_quantity } = req.body
     const user_id = req.user._id
     
     if (!product_name || !price) {
         return res.status(400).json({ error: 'please fill out all fields' })
     }
     try {
-        const product = await Product.create({ product_name, price ,  user_id })
+        const product = await Product.create({ product_name, price , description , tags, images , stock_quantity ,  user_id })
         res.status(201).json(product)
     }
     catch (error) {

@@ -5,7 +5,7 @@ const AddToCart = ({id}) => {
 
     const{dispatch} = UseProductContext()
 
-    const [quantity , setQuantity] = useState('')
+    const [quantity , setQuantity] = useState(1)
  
     const handleAddToCart = async() => {
         const response = await fetch(`http://localhost:4000/api/cart`,{

@@ -12,7 +12,7 @@ import userRouter from './routes/userRoutes.js'
 import cartRouter from './routes/cartRoutes.js'
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'http://localhost:5174',
     credentials: true,
 };
 
