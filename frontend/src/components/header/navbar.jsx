@@ -5,8 +5,8 @@ import UserInfo from "./userInfo"
 const Navbar = () => {
 
     return (
-        <div className="shadow p-5 flex justify-between items-center bg-white ">
-            <Link to='/' className="text-blue-500 text-5xl font-bold">Buy & sell</Link>
+        <div className="shadow p-5 flex justify-between items-center bg-main ">
+            <Link to='/' className="text-primary text-5xl font-bold">Buy & sell</Link>
             <UserInfo></UserInfo>
         </div>
     )
