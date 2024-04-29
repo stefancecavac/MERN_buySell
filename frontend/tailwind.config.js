@@ -9,7 +9,11 @@ export default {
       colors:{
         main: '#262626',
         primary: '#eab308',
-        secundary: ''
+        secundary: '',
+        success_primary: '#84cc16',
+        succes_secundary: '#bef264',
+        error_primary:'#ef4444',
+        error_secundary:'#fca5a5'
       },
       fontFamily:{
         primary:['Poppins']

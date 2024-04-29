@@ -15,7 +15,9 @@ const getCart = async (req, res) => {
 const addToCart = async (req, res) => {
     const { product ,quantity } = req.body
     const user_id = req.user._id
-
+    if(quantity === 0){
+        return res.status(400).json({error: 'Must add atleast 1 product'})
+    }
     try {
         let cart = await Cart.findOne({ user_id })
 

@@ -23,8 +23,7 @@ const Cart = () => {
     },[dispatch])
     
     return(
-        <div>
-            
+        <div> 
            {cart && cart.products && cart.products.map((product) => (
             <div className="flex" key={product._id}>
                 <p>{product.product_id.product_name}</p>
