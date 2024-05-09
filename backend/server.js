@@ -10,6 +10,7 @@ import cookieParser from 'cookie-parser'
 import productRouter from './routes/productRoutes.js'
 import userRouter from './routes/userRoutes.js'
 import cartRouter from './routes/cartRoutes.js'
+import whishListRouter from './routes/whishListRoutes.js'
 
 const corsOptions = {
     origin: ['http://localhost:5173','http://localhost:5174'],
@@ -24,6 +25,7 @@ app.use(cookieParser())
 app.use('/api/products' , productRouter)
 app.use('/api/user' , userRouter)
 app.use('/api/cart' , cartRouter)
+app.use('/api/whishList' , whishListRouter)
 
 
 mongoose.connect(process.env.DB_URI)

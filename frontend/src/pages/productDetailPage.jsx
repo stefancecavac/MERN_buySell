@@ -33,7 +33,7 @@ const ProductDetailPage = () => {
                 {/* image functions */}
                 <div className=" flex flex-col justify-between w-full bg-white ">
                     <p className="bg-primary rounded-full px-2 w-1/6 text-2xl m-5 text-main">Qt: {singleProduct.stock_quantity}</p>
-                    <img className="bg-gray-300 w-full h-3/4 shadow " src={'../../../public/sofa.jpeg'} alt="image"></img>
+                    <img className="bg-gray-300 w-full h-3/4 shadow " src={'/sofa.jpeg'} alt="image"></img>
                     <p>buttons</p>
                 </div>
 

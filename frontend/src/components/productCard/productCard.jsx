@@ -4,7 +4,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="rounded shadow bg-main  flex flex-col overflow-hidden">
-            <img className="bg-gray-300 w-full h-52 shadow " src={'../../../public/sofa.jpeg'} alt="image"></img>
+            <img className="bg-gray-300 w-full h-52 shadow " src={'/sofa.jpeg'} alt="image"></img>
 
             <div className="flex flex-col">
                 <p className="ml-3 mt-3 text-xl text-white">{product.product_name}</p>
